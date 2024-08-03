@@ -16,14 +16,19 @@ int length(int arr[], char* type) {
         printf("Provide a (lower case) type for the function!\n");
         return -1;  
     }
-    //printf("%d", sizeof(arr));
+    printf("%d", sizeof(arr));
+    printf("%d", sizeof(arr[0]));
     //printf("%d", sizeof(type_p));
     //return sizeof(&arr) / sizeof(type_p);
     return sizeof(arr) / sizeof(arr[0]);
     //return sizeof(arr_end - arr_beg) / sizeof(type_p);
 }
 
+
+int last
+
 int main() {
     int arr[] = {1, 2, 3};
+    //printf("%d", sizeof(arr));
     printf("The array length is %d\n", length(arr, "int"));
 }
