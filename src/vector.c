@@ -13,7 +13,7 @@ float* fp_vector(float data[], int len, int n) {
     }
 
     float* vector = (float*)malloc(n * sizeof(float));
-    for (int i = 0; i < n; i++) {
+    for (int i = 0; i < len; i++) {
         vector[i] = data[i]; 
     }
 
@@ -35,16 +35,4 @@ float inner_product(float* vec1, int len1, float* vec2, int len2, int* error) {
 
     *error = 0;
     return ip;
-}
-
-int main() {
-
-    float arr1[] = {1,2,3};
-    float arr2[] = {4,5,6};
-    int error = 0;
-    int* error_ptr = &error;
-
-    float ip = inner_product(fp_vector(arr1, 3, 3), 3, fp_vector(arr2, 3, 3), 3, error_ptr);
-
-    printf("%f, %d\n", ip, *error_ptr);    
 }
